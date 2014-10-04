@@ -25,6 +25,7 @@
 
 @property (weak) IBOutlet NSTextField *ProgressLabel;
 @property (weak) IBOutlet NSTextField *wordLabel;
+@property (weak) IBOutlet NSTextField *phoneticLabel;
 
 @property (weak) IBOutlet NSButton *button1;
 @property (weak) IBOutlet NSButton *button2;

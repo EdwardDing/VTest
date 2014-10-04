@@ -18,6 +18,7 @@
                 <outlet property="button2" destination="Uz4-qS-9GO" id="NFg-rH-V5Z"/>
                 <outlet property="button3" destination="1pf-Te-37C" id="L5b-5g-0K6"/>
                 <outlet property="button4" destination="uvm-eQ-Ncv" id="C97-CH-03H"/>
+                <outlet property="phoneticLabel" destination="2V2-il-ZP9" id="SYY-ed-ml3"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
                 <outlet property="wordLabel" destination="bLQ-fr-n7U" id="7Sm-6D-hOM"/>
             </connections>
@@ -675,14 +676,14 @@
         <window title="VTest" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="375" y="218" width="746" height="468"/>
+            <rect key="contentRect" x="375" y="218" width="748" height="459"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="746" height="468"/>
+                <rect key="frame" x="0.0" y="0.0" width="748" height="459"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-xG-yrJ">
-                        <rect key="frame" x="24" y="429" width="75" height="19"/>
+                        <rect key="frame" x="24" y="420" width="75" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Progress:" id="QuZ-6g-wgp">
                             <font key="font" metaFont="system" size="16"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -690,7 +691,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFg-Qn-VXy">
-                        <rect key="frame" x="103" y="429" width="33" height="19"/>
+                        <rect key="frame" x="103" y="420" width="33" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="Jam-kl-Ls9">
                             <font key="font" metaFont="system" size="16"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -698,7 +699,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNO-X0-dBq">
-                        <rect key="frame" x="130" y="429" width="10" height="19"/>
+                        <rect key="frame" x="130" y="420" width="10" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="/" id="G67-LH-3Rr">
                             <font key="font" metaFont="system" size="16"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -706,7 +707,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7U8-0t-O69">
-                        <rect key="frame" x="142" y="429" width="38" height="19"/>
+                        <rect key="frame" x="142" y="420" width="38" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="50" id="zcZ-dD-kZF">
                             <font key="font" metaFont="system" size="16"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -714,17 +715,17 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-Te-37C">
-                        <rect key="frame" x="64" y="41" width="300" height="100"/>
+                        <rect key="frame" x="64" y="26" width="300" height="100"/>
                         <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="LFt-nM-udT">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="answerSelected:" target="Voe-Tx-rLC" id="Ckg-JE-Mw4"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLQ-fr-n7U">
-                        <rect key="frame" x="130" y="294" width="494" height="68"/>
+                        <rect key="frame" x="62" y="312" width="632" height="68"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="TestWord" id="IGL-Jb-fNT">
                             <font key="font" size="48" name="HelveticaNeue-Thin"/>
                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -732,37 +733,37 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uz4-qS-9GO">
-                        <rect key="frame" x="392" y="158" width="300" height="100"/>
+                        <rect key="frame" x="392" y="155" width="300" height="100"/>
                         <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="MN5-ud-zuR">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="answerSelected:" target="Voe-Tx-rLC" id="lKj-dk-Hdy"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="uvm-eQ-Ncv">
-                        <rect key="frame" x="392" y="41" width="300" height="100"/>
+                        <rect key="frame" x="392" y="26" width="300" height="100"/>
                         <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="SqG-5T-sDu">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="answerSelected:" target="Voe-Tx-rLC" id="sNd-PF-Gkl"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cjp-cy-Fbb">
-                        <rect key="frame" x="64" y="158" width="300" height="100"/>
+                        <rect key="frame" x="64" y="155" width="300" height="100"/>
                         <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="FzM-ws-jfl">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="answerSelected:" target="Voe-Tx-rLC" id="jo1-Fg-2dY"/>
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32C-zY-rDn">
-                        <rect key="frame" x="648" y="370" width="44" height="36"/>
+                        <rect key="frame" x="667" y="388" width="44" height="36"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="siri_blue" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Fwl-Xm-IBK">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -771,9 +772,17 @@
                             <action selector="readCurrentWord:" target="Voe-Tx-rLC" id="Oxl-un-XWk"/>
                         </connections>
                     </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2V2-il-ZP9">
+                        <rect key="frame" x="62" y="279" width="632" height="39"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="44C-eM-QqB">
+                            <font key="font" size="20" name="Helvetica-Light"/>
+                            <color key="textColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="446" y="372"/>
+            <point key="canvasLocation" x="447" y="367.5"/>
         </window>
     </objects>
     <resources>

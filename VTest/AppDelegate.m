@@ -60,9 +60,10 @@
 
 - (void)loadNextWord{
     
-    // Set the word
+    // Set the word and phonetic
     [randList next];
     [_wordLabel setStringValue:[randList stringForColumn:@"word"]];
+    [_phoneticLabel setStringValue:[randList stringForColumn:@"phonetic"]];
     
     
     // randomly choose a place to put the right answer & fill the other
