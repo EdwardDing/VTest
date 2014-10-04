@@ -13,4 +13,4 @@ Actually I can't finish this project on my own, so if you are interested in this
 
 Screen shot
 ------------------
-![](https://github.com/EdwardDing/gitImage/raw/master/VTest-Scrrenshot.png "Scrren shot for VTest demo")
+![](https://github.com/EdwardDing/gitImage/raw/master/VTest-Screenshot.png "Scrren shot for VTest demo")
