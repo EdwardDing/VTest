@@ -18,6 +18,8 @@
                 <outlet property="button2" destination="Uz4-qS-9GO" id="NFg-rH-V5Z"/>
                 <outlet property="button3" destination="1pf-Te-37C" id="L5b-5g-0K6"/>
                 <outlet property="button4" destination="uvm-eQ-Ncv" id="C97-CH-03H"/>
+                <outlet property="passButton" destination="X5B-Hi-aEH" id="SGz-h9-nmX"/>
+                <outlet property="passButtonPressed" destination="X5B-Hi-aEH" id="phN-t0-N1u"/>
                 <outlet property="phoneticLabel" destination="2V2-il-ZP9" id="SYY-ed-ml3"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
                 <outlet property="wordLabel" destination="bLQ-fr-n7U" id="7Sm-6D-hOM"/>
@@ -677,7 +679,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="375" y="218" width="748" height="459"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="748" height="459"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -763,7 +765,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32C-zY-rDn">
-                        <rect key="frame" x="667" y="388" width="44" height="36"/>
+                        <rect key="frame" x="585" y="395" width="44" height="36"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="siri_blue" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Fwl-Xm-IBK">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -780,9 +782,19 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="X5B-Hi-aEH">
+                        <rect key="frame" x="637" y="400" width="55" height="25"/>
+                        <buttonCell key="cell" type="squareTextured" title="Pass" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WvD-K2-JqU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="answerSelected:" target="Voe-Tx-rLC" id="EVo-bY-37R"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="447" y="367.5"/>
+            <point key="canvasLocation" x="-1219" y="383.5"/>
         </window>
     </objects>
     <resources>

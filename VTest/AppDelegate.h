@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import <FMDB/FMDatabase.h>
 
+#define PASS_BUTTON_TAG 4
+
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
 
     FMResultSet *randList;
@@ -16,11 +18,14 @@
     
     NSMutableArray *buttons;
     
+    // Progress Control Parameters
     int testScale;
     int processCount;
-    int index;
+    
+    // Grade & Result Parameters
     int correctCount;
     int correctIndex;
+    int passCount;
 }
 
 @property (weak) IBOutlet NSTextField *ProgressLabel;
@@ -31,11 +36,13 @@
 @property (weak) IBOutlet NSButton *button2;
 @property (weak) IBOutlet NSButton *button3;
 @property (weak) IBOutlet NSButton *button4;
+@property (weak) IBOutlet NSButton *passButton;
+
 
 
 // IBActions
-- (IBAction)answerSelected:(id)sender;
-- (IBAction)readCurrentWord:(id)sender;
+- (IBAction)answerSelected:(NSButton *)sender;
+- (IBAction)readCurrentWord:(NSButton *)sender;
 
 // Supplementary Functions
 -(void)loadNextWord;

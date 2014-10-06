@@ -18,10 +18,18 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    //Initialize
+    // Initialize
     testScale = 50;
     processCount = 0;
     buttons = [[NSMutableArray alloc]initWithObjects:_button1,_button2,_button3,_button4,nil];
+    
+    // Binding buttons with keys
+    for (NSButton *ansButton in buttons) {
+            [ansButton setKeyEquivalent:
+             [NSString stringWithFormat:@"%ld",
+              (long)[ansButton tag] + 1]];
+    }
+    [_passButton setKeyEquivalent:@" "];
     
     // load Data Base
     NSString *dbPath = [[NSBundle mainBundle] pathForResource:@"wordlist" ofType:@"sqlite"];
@@ -44,6 +52,8 @@
 - (IBAction)answerSelected:(id)sender {
     if ([sender tag] == correctIndex) {
         correctCount++;
+    } else if ([sender tag] == PASS_BUTTON_TAG) {
+        passCount++;
     }
     
     if (processCount < testScale) {
@@ -53,7 +63,7 @@
                                          defaultButton:@"OK"
                                        alternateButton:@"Cancel"
                                            otherButton:nil
-                             informativeTextWithFormat:@"%d Correct!", correctCount];
+                             informativeTextWithFormat:@"%d Correct, %d Passes", correctCount, passCount];
         [alert runModal];
     }
 }
