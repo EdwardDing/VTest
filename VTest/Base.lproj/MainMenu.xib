@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
     </dependencies>
@@ -21,6 +21,7 @@
                 <outlet property="passButton" destination="X5B-Hi-aEH" id="SGz-h9-nmX"/>
                 <outlet property="passButtonPressed" destination="X5B-Hi-aEH" id="phN-t0-N1u"/>
                 <outlet property="phoneticLabel" destination="2V2-il-ZP9" id="SYY-ed-ml3"/>
+                <outlet property="scaleLabel" destination="7U8-0t-O69" id="USd-qk-voZ"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
                 <outlet property="wordLabel" destination="bLQ-fr-n7U" id="7Sm-6D-hOM"/>
             </connections>
@@ -718,7 +719,7 @@
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-Te-37C">
                         <rect key="frame" x="64" y="26" width="300" height="100"/>
-                        <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="LFt-nM-udT">
+                        <buttonCell key="cell" type="squareTextured" title="Word C" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="LFt-nM-udT">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
@@ -736,7 +737,7 @@
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uz4-qS-9GO">
                         <rect key="frame" x="392" y="155" width="300" height="100"/>
-                        <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="MN5-ud-zuR">
+                        <buttonCell key="cell" type="squareTextured" title="Word B" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="MN5-ud-zuR">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
@@ -746,7 +747,7 @@
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="uvm-eQ-Ncv">
                         <rect key="frame" x="392" y="26" width="300" height="100"/>
-                        <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="SqG-5T-sDu">
+                        <buttonCell key="cell" type="squareTextured" title="Word D" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="SqG-5T-sDu">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
@@ -756,7 +757,7 @@
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cjp-cy-Fbb">
                         <rect key="frame" x="64" y="155" width="300" height="100"/>
-                        <buttonCell key="cell" type="squareTextured" title="Textured Button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="FzM-ws-jfl">
+                        <buttonCell key="cell" type="squareTextured" title="Word A" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Morse" inset="2" id="FzM-ws-jfl">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" size="14" name="HiraginoSansGB-W3"/>
                         </buttonCell>
@@ -794,7 +795,7 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1219" y="383.5"/>
+            <point key="canvasLocation" x="-2340" y="358.5"/>
         </window>
     </objects>
     <resources>

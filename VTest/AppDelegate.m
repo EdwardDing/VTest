@@ -17,9 +17,34 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    // Pop up an modal Alert
+    // Ask the user to select the amount of words to review
+    
+    NSAlert *scaleAlert = [NSAlert alertWithMessageText:@"Set the Scale"
+                                     defaultButton:@"Set"
+                                   alternateButton:@"Quit"
+                                       otherButton:nil
+                         informativeTextWithFormat:@"Pleasd input the number of words you want to review"];
+    
+    NSTextField *ipTextField = [[NSTextField alloc]init];
+    ipTextField.backgroundColor = [NSColor whiteColor];
+    ipTextField.frame = CGRectMake(0, 0, 250, 23);
+    [scaleAlert setAccessoryView:ipTextField];
+    
+    while (true) {
+        if ([scaleAlert runModal] == NSAlertAlternateReturn) {
+            exit(1);
+        } else {
+            testScale = [[ipTextField stringValue] intValue];
+            if (testScale > 0) {
+                [_scaleLabel setStringValue:[NSString stringWithFormat:@"%d", testScale]];
+                break;
+            }
+        }
+    }
     
     // Initialize
-    testScale = 50;
+    resultWindowController = [[ResultWindowController alloc] init];
     processCount = 0;
     buttons = [[NSMutableArray alloc]initWithObjects:_button1,_button2,_button3,_button4,nil];
     
@@ -49,24 +74,46 @@
     // Insert code here to tear down your application
 }
 
+#pragma - IBActions -
+
 - (IBAction)answerSelected:(id)sender {
     if ([sender tag] == correctIndex) {
         correctCount++;
-    } else if ([sender tag] == PASS_BUTTON_TAG) {
-        passCount++;
+    } else {
+        NSDictionary * thisWord = [[NSDictionary alloc]
+                                            initWithObjectsAndKeys:
+                                            [randList stringForColumn:@"interpret"], @"interpret",
+                                            [randList stringForColumn:@"word"], @"word",
+                                            nil];
+        if ([sender tag] == PASS_BUTTON_TAG) {
+            passCount++;
+            [resultWindowController.incorrectWords addObject:thisWord];
+        } else {
+            [resultWindowController.passWords addObject:thisWord];
+        }
     }
+    
     
     if (processCount < testScale) {
         [self loadNextWord];
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Finished!"
                                          defaultButton:@"OK"
-                                       alternateButton:@"Cancel"
+                                       alternateButton:@"Show Details"
                                            otherButton:nil
                              informativeTextWithFormat:@"%d Correct, %d Passes", correctCount, passCount];
-        [alert runModal];
+        if ([alert runModal] == NSAlertAlternateReturn) {
+            [[resultWindowController initWithWindowNibName:@"ResultWindow"] window];
+        }
     }
 }
+
+- (IBAction)readCurrentWord:(id)sender {
+    NSSpeechSynthesizer *voice = [[NSSpeechSynthesizer alloc] init];
+    [voice startSpeakingString:[randList stringForColumn:@"word"]];
+}
+
+#pragma - Supplementary Methods for IBActions -
 
 - (void)loadNextWord{
     
@@ -101,11 +148,4 @@
     NSSpeechSynthesizer *voice = [[NSSpeechSynthesizer alloc] init];
     [voice startSpeakingString:[randList stringForColumn:@"word"]];
 }
-
-- (IBAction)readCurrentWord:(id)sender {
-    NSSpeechSynthesizer *voice = [[NSSpeechSynthesizer alloc] init];
-    [voice startSpeakingString:[randList stringForColumn:@"word"]];
-}
-
-
 @end

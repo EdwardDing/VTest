@@ -12,6 +12,8 @@
 		66235F0519D80E9A00F43952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66235F0419D80E9A00F43952 /* AppDelegate.m */; };
 		66235F0A19D80E9A00F43952 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66235F0819D80E9A00F43952 /* MainMenu.xib */; };
 		66235F1619D80E9A00F43952 /* VTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66235F1519D80E9A00F43952 /* VTestTests.m */; };
+		6661E46E19E43607006D4852 /* ResultWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6661E46D19E43607006D4852 /* ResultWindowController.m */; };
+		6661E47019E436A9006D4852 /* ResultWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6661E46F19E436A9006D4852 /* ResultWindow.xib */; };
 		6668F98519DF9709000784F3 /* wordlist.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6668F98419DF9709000784F3 /* wordlist.sqlite */; };
 		66CFF7FE19D8FBE90098FF2C /* siri_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CFF7FD19D8FBE90098FF2C /* siri_white.png */; };
 		66CFF80019D8FD540098FF2C /* siri_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CFF7FF19D8FD540098FF2C /* siri_blue.png */; };
@@ -38,6 +40,9 @@
 		66235F0F19D80E9A00F43952 /* VTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66235F1419D80E9A00F43952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66235F1519D80E9A00F43952 /* VTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTestTests.m; sourceTree = "<group>"; };
+		6661E46C19E43607006D4852 /* ResultWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultWindowController.h; sourceTree = "<group>"; };
+		6661E46D19E43607006D4852 /* ResultWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultWindowController.m; sourceTree = "<group>"; };
+		6661E46F19E436A9006D4852 /* ResultWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultWindow.xib; sourceTree = "<group>"; };
 		6668F98419DF9709000784F3 /* wordlist.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = wordlist.sqlite; sourceTree = "<group>"; };
 		66CFF7FD19D8FBE90098FF2C /* siri_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siri_white.png; sourceTree = "<group>"; };
 		66CFF7FF19D8FD540098FF2C /* siri_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siri_blue.png; sourceTree = "<group>"; };
@@ -107,6 +112,9 @@
 				66235F0319D80E9A00F43952 /* AppDelegate.h */,
 				66235F0419D80E9A00F43952 /* AppDelegate.m */,
 				66235F0819D80E9A00F43952 /* MainMenu.xib */,
+				6661E46C19E43607006D4852 /* ResultWindowController.h */,
+				6661E46D19E43607006D4852 /* ResultWindowController.m */,
+				6661E46F19E436A9006D4852 /* ResultWindow.xib */,
 				66235EFF19D80E9A00F43952 /* Supporting Files */,
 			);
 			path = VTest;
@@ -226,6 +234,7 @@
 				66CFF7FE19D8FBE90098FF2C /* siri_white.png in Resources */,
 				66CFF80019D8FD540098FF2C /* siri_blue.png in Resources */,
 				66235F0A19D80E9A00F43952 /* MainMenu.xib in Resources */,
+				6661E47019E436A9006D4852 /* ResultWindow.xib in Resources */,
 				6668F98519DF9709000784F3 /* wordlist.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +288,7 @@
 			files = (
 				66235F0519D80E9A00F43952 /* AppDelegate.m in Sources */,
 				66235F0219D80E9A00F43952 /* main.m in Sources */,
+				6661E46E19E43607006D4852 /* ResultWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

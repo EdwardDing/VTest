@@ -7,12 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ResultWindowController.h"
 #import <FMDB/FMDatabase.h>
 
 #define PASS_BUTTON_TAG 4
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
-
+    ResultWindowController *resultWindowController;
+    
+    // Data Base
     FMResultSet *randList;
     FMDatabase *wordsDB;
     
@@ -31,13 +34,13 @@
 @property (weak) IBOutlet NSTextField *ProgressLabel;
 @property (weak) IBOutlet NSTextField *wordLabel;
 @property (weak) IBOutlet NSTextField *phoneticLabel;
+@property (weak) IBOutlet NSTextField *scaleLabel;
 
 @property (weak) IBOutlet NSButton *button1;
 @property (weak) IBOutlet NSButton *button2;
 @property (weak) IBOutlet NSButton *button3;
 @property (weak) IBOutlet NSButton *button4;
 @property (weak) IBOutlet NSButton *passButton;
-
 
 
 // IBActions
